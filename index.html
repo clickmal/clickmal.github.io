@@ -1,11 +1,143 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title> Burmese Text </title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-@import url('http://fonts.googleapis.com/earlyaccess/khyay.css)';
-<style type="text/css">
-font-family: 'Khyay';
-</style></head><p>
-ပျော်ရွှင် ချမ်းမြေ့ လိုရာဆန္ဒ ပြည့် ပါစေ။
-</p></html>
+    <title>Mflix Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="https://raw.githubusercontent.com/botvpp/git/main/img/webapplogo.png" type="png">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/main.css">
+<img src="https://raw.githubusercontent.com/botvpp/git/main/img/screen.png" style="height: 0px; width: 0px;">
+
+
+    <style>
+        .menu {
+            cursor: pointer;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            margin-top: 3px;
+            position: absolute;
+        }
+
+        .slideOutLeft {
+            animation-name: slideOut;
+            animation-duration: .5s;
+        }
+
+        @keyframes slideOut {
+            0% {
+                transform: translateX(0px);
+            }
+            100% {
+                transform: translateX(-200px);
+            }
+        }
+
+
+    </style>
+</head>
+
+<main id="main">
+
+  
+
+    <header id="header" class="w3-card-4 w3-blue">
+    
+         
+        <h3 class="w3-center">Myanmar Flix</h3>
+
+        
+    </header>
+
+    <div onclick="w3_close()" id="contents" class="content">
+        <div class="w3-panel w3-container">
+ <div class="container">
+<div class="w3-center">
+        <figure>
+<img src="https://1.bp.blogspot.com/-MusB0yQgNRI/YVIjvP-qXJI/AAAAAAAARBI/FeySPRF5qvkpRkf9xtpyqllwkYE0TGv4QCLcBGAsYHQ/s0/mmflix%2Bapplogo.png"
+alt="Avatar" style="width:200px;">
+<figcaption><h1>M Flix Software</h1></figcaption>
+ <div class="card-body">
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li><h3>တစ်လ = ၁၀၀၀ ကျပ်</h3></li>
+                            <li><h3>သုံးလ = ၃၀၀၀ ကျပ်</h3></li>
+                            <li><h3>ခြောက်လ = ၆၀၀၀ ကျပ်</h3></li>
+                        </ul>
+ <a href="https://www.facebook.com/Mflix_Myanmar-102392252203880/?device_id=f880d431-fc1e-4496-9bfd-00834d2907ec">
+<button class="w3-button w3-blue">Facebook Page</button></a>
+ <a href="https://msng.link/o/?09975403353=vi">
+<button class="w3-button w3-blue">Viber</button></a>
+</figure>
+
+     <div class="container">
+            <div class="card-deck mb-3 text-center">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-header w3-blue">
+                        <h4 class="my-0 font-weight-normal">Mflix App Download</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Myanmar Sub Movies & Series</li>
+                            <li>Tv Channel</li>
+                            <li>Foodball Channel</li>
+                            <li>Premiun 18+</li>
+                        </ul>
+                       <a href="https://drive.google.com/file/d/1s9KoVCbqpdWcOSBKSqdvDMdWqhcHkV5s/view">
+<button class="w3-button w3-blue">Download Now</button></a>
+                    </div>
+                </div>
+       
+                   
+                </div>
+            
+                </div>
+                <hr>
+<div class="w3-center">
+<p><span style="font-size: small;">© 2020 Mobile App, All Rights Reserved.</span></p><span style="font-size: small;">
+</span><p><span style="font-size: small;">Developed By: <a href="https://mflix.webstarterz.com/">Mflix App</a></span></p>
+</div>
+            </form>
+
+        </div>
+    </div>
+
+
+</main>
+
+<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+<script>
+
+    let drawer = document.getElementById("drawer");
+    let menuIcon = document.getElementById('menuIcon');
+
+    function w3_open() {
+        if (drawer.classList.contains("w3-hide")){
+            drawer.classList.remove("w3-hide");
+            menuIcon.innerText = "⬅";
+        } else w3_close();
+    }
+
+    function w3_close() {
+        menuIcon.innerText = "☰";
+        drawer.classList.remove("w3-animate-left");
+        drawer.classList.add("slideOutLeft");
+        setTimeout(function () {
+                drawer.classList.add("w3-hide");
+                drawer.classList.add("w3-animate-left");
+                drawer.classList.remove("slideOutLeft");
+            }, 400);
+    }
+
+    let hammer = new Hammer(drawer);
+    hammer.on("panleft", function () {
+        w3_close();
+    });
+
+
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"69574fe6ac4b2e92","version":"2021.8.1","r":1,"token":"58b5fd28c580466fad7c37b86267943d","si":10}'></script>
+</html>
